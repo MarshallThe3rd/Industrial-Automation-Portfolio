@@ -1,41 +1,76 @@
 # Industrial Automation Portfolio
 
-A collection of industrial automation projects built with ESP32, demonstrating PLC-inspired control logic, sensors, actuators, timers, counters, and industrial process automation concepts.
+A collection of industrial automation projects built with ESP32, inspired by PLC-based industrial control systems. This repository demonstrates fundamental automation concepts such as digital I/O, timers, counters, sensors, actuators, and process control.
 
 ---
 
-# Project 01 – Start Stop Station
+## Objectives
 
-## Objective
+* Learn industrial automation concepts through hands-on projects.
+* Simulate PLC logic using ESP32.
+* Build a professional engineering portfolio.
+* Practice integrating sensors, actuators, and control logic.
 
-Design and implement a basic **Start/Stop control station** similar to those commonly used in industrial control panels.
+---
 
-## Learning Outcomes
+## Hardware & Software
 
-* Digital Input and Digital Output
-* Push Button Interface
-* Latching (Self-Holding) Logic
-* Button Debouncing
-* Basic Industrial Control Logic
-
-## Hardware
+### Hardware
 
 * ESP32 Development Board
-* 2 × Push Buttons (START and STOP)
-* LED Indicator *(or Relay Module for motor simulation)*
+* Push Buttons
+* LEDs
+* Relay Module
+* Servo Motor
+* IR Sensor
+* Ultrasonic Sensor
+* Water Level Sensor
+* Breadboard & Jumper Wires
 
-## Control Logic
+### Software
 
-1. Press the **START** push button.
-2. The LED turns **ON** and remains ON (latched).
-3. Press the **STOP** push button.
-4. The LED turns **OFF**.
+* Arduino IDE
+* C++
+* Git & GitHub
 
-> **Logic Type:** Active High
+---
 
-## Deliverables
+## Projects
 
-* Wiring Diagram
-* Source Code
-* Demonstration Video
-* Project Explanation
+| No. | Project                  | Main Topics                       | Status |
+| --- | ------------------------ | --------------------------------- | :----: |
+| 01  | Start Stop Station       | Digital I/O, Latching, Debouncing |    ⏳   |
+| 02  | Emergency Stop System    | Safety, Interlock                 |    ⏳   |
+| 03  | Conveyor Timer           | Timers, State Machine             |    ⏳   |
+| 04  | Object Counter           | Sensors, Counter                  |    ⏳   |
+| 05  | Traffic Light Controller | Finite State Machine              |    ⏳   |
+| 06  | Parking Gate Automation  | Servo, Ultrasonic Sensor          |    ⏳   |
+| 07  | Water Tank Controller    | Level Control, Relay              |    ⏳   |
+| 08  | Bottle Filling System    | Process Sequence                  |    ⏳   |
+| 09  | Conveyor Sorting         | Sensors, Decision Logic           |    ⏳   |
+| 10  | Mini Production Line     | System Integration                |    ⏳   |
+
+---
+
+## Repository Structure
+
+```text
+industrial-automation-portfolio/
+│
+├── Project-01-Start-Stop-Station/
+├── Project-02-Emergency-Stop-System/
+├── Project-03-Conveyor-Timer/
+├── Project-04-Object-Counter/
+├── Project-05-Traffic-Light-Controller/
+├── Project-06-Parking-Gate-Automation/
+├── Project-07-Water-Tank-Controller/
+├── Project-08-Bottle-Filling-System/
+├── Project-09-Conveyor-Sorting/
+└── Project-10-Mini-Production-Line/
+```
+
+---
+
+## License
+
+This project is licensed under the MIT License.
