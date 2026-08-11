@@ -57,16 +57,16 @@ A collection of industrial automation projects built with ESP32, inspired by PLC
 ```text
 industrial-automation-portfolio/
 │
-├── Project-01-Start-Stop-Station/
-├── Project-02-Emergency-Stop-System/
-├── Project-03-Conveyor-Timer/
-├── Project-04-Object-Counter/
-├── Project-05-Traffic-Light-Controller/
-├── Project-06-Parking-Gate-Automation/
-├── Project-07-Water-Tank-Controller/
-├── Project-08-Bottle-Filling-System/
-├── Project-09-Conveyor-Sorting/
-└── Project-10-Mini-Production-Line/
+├── Project-01_Start_Stop_Station/
+├── Project-02_Emergency_Stop_System/
+├── Project-03_Conveyor_Timer/
+├── Project-04_Object_Counter/
+├── Project-05_Traffic_Light-Controller/
+├── Project-06_Parking_Gate-Automation/
+├── Project-07_Water_Tank-Controller/
+├── Project-08_Bottle_Filling-System/
+├── Project-09_Conveyor_Sorting/
+└── Project-10_Mini_Production_Line/
 ```
 
 ---
