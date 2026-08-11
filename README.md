@@ -37,18 +37,18 @@ A collection of industrial automation projects built with ESP32, inspired by PLC
 
 ## Projects
 
-| No. | Project                  | Main Topics                       | Status |
-| --- | ------------------------ | --------------------------------- | :----: |
-| 01  | Start Stop Station       | Digital I/O, Latching, Debouncing |    ✅   |
-| 02  | Emergency Stop System    | Safety, Interlock                 |    ⏳   |
-| 03  | Conveyor Timer           | Timers, State Machine             |    ⏳   |
-| 04  | Object Counter           | Sensors, Counter                  |    ⏳   |
-| 05  | Traffic Light Controller | Finite State Machine              |    ⏳   |
-| 06  | Parking Gate Automation  | Servo, Ultrasonic Sensor          |    ⏳   |
-| 07  | Water Tank Controller    | Level Control, Relay              |    ⏳   |
-| 08  | Bottle Filling System    | Process Sequence                  |    ⏳   |
-| 09  | Conveyor Sorting         | Sensors, Decision Logic           |    ⏳   |
-| 10  | Mini Production Line     | System Integration                |    ⏳   |
+| No. | Project                  | Main Topics                          | Status |
+| --- | ------------------------ | ------------------------------------ | :----: |
+| 01  | Start Stop Station       | Digital I/O, Latching, State Control |    ✅   |
+| 02  | Emergency Stop System    | Safety, Interlock                    |    ⏳   |
+| 03  | Conveyor Timer           | Timers, State Machine                |    ⏳   |
+| 04  | Object Counter           | Sensors, Counter                     |    ⏳   |
+| 05  | Traffic Light Controller | Finite State Machine                 |    ⏳   |
+| 06  | Parking Gate Automation  | Servo, Ultrasonic Sensor             |    ⏳   |
+| 07  | Water Tank Controller    | Level Control, Relay                 |    ⏳   |
+| 08  | Bottle Filling System    | Process Sequence                     |    ⏳   |
+| 09  | Conveyor Sorting         | Sensors, Decision Logic              |    ⏳   |
+| 10  | Mini Production Line     | System Integration                   |    ⏳   |
 
 ---
 
