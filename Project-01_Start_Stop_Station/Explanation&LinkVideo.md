@@ -1,5 +1,7 @@
 # Project 01 - Start Stop Station
 
+LINK VIDEO : https://youtube.com/shorts/9BZFkrv-fqc?si=ajguD65vyTBAovfh
+
 ## 1. System Overview
 
 **Start Stop Station** adalah sistem kontrol sederhana yang mensimulasikan mekanisme **START/STOP** pada panel kontrol industri.
