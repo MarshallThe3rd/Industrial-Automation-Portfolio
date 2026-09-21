@@ -1,60 +1,211 @@
-# Project 02: Emergency Stop Station
 
-## Overview
+# Project 02 - Emergency Stop Station
 
-Emergency Stop Station is an ESP32-based control system simulation designed to demonstrate basic industrial control logic using push buttons and LED indicators.
+LINK VIDEO : [Tambahkan link video di sini]
 
-The system has three operating states: **READY**, **RUNNING**, and **EMERGENCY**. It uses a state-based control mechanism to manage the system's operation and simulate an emergency stop condition.
+## 1. System Overview
 
-## Components
+**Emergency Stop Station** adalah sistem kontrol sederhana berbasis ESP32 yang mensimulasikan mekanisme **START/STOP dan Emergency Stop** pada panel kontrol industri.
 
-* ESP32 Development Board
-* 4 Push Buttons:
+Push button **START** digunakan untuk mengaktifkan sistem, sedangkan push button **STOP** digunakan untuk mengembalikan sistem ke kondisi READY. Push button **E-STOP** digunakan untuk mengaktifkan kondisi darurat, dan push button **RESET** digunakan untuk mengembalikan sistem dari kondisi darurat ke kondisi READY.
 
-  * START
-  * STOP
-  * E-STOP
-  * RESET
-* Green LED as RUNNING indicator
-* Red LED as EMERGENCY indicator
-* 2 × 1 kΩ resistors
-* Breadboard and jumper wires
+LED hijau digunakan sebagai indikator sistem sedang RUNNING, sedangkan LED merah digunakan sebagai indikator kondisi EMERGENCY.
 
-## Pin Configuration
+Project ini dibuat menggunakan ESP32 dengan konsep dasar **Digital Input, Digital Output, State Machine, dan Emergency Stop Logic**.
 
-| Component     | ESP32 GPIO |
-| ------------- | ---------- |
-| Green LED     | GPIO 23    |
-| Red LED       | GPIO 22    |
-| START Button  | GPIO 18    |
-| STOP Button   | GPIO 19    |
-| E-STOP Button | GPIO 21    |
-| RESET Button  | GPIO 4     |
+---
 
-## System Operation
+## 2. Control Logic
 
-The system operates using three states:
+Sistem menggunakan variabel `state` sebagai **state** untuk menyimpan kondisi sistem.
 
-* **READY:** Both LEDs are OFF. The system is ready to start.
-* **RUNNING:** The green LED is ON, indicating that the system is running.
-* **EMERGENCY:** The red LED is ON and the green LED is OFF. The system remains in this state until the RESET button is pressed.
+### READY State
 
-### Control Logic
+```text
+Initial State
+     ↓
+state = 0
+     ↓
+Green LED OFF
+     ↓
+Red LED OFF
+```
 
-1. Pressing **START** changes the state from READY to RUNNING.
-2. Pressing **STOP** changes the state from RUNNING to READY.
-3. Pressing **E-STOP** changes the state to EMERGENCY.
-4. Pressing **RESET** changes the state from EMERGENCY to READY.
+### START Sequence
 
-The emergency state remains active even after the E-STOP button is released.
+```text
+START Button
+     ↓
+digitalRead()
+     ↓
+state = 1
+     ↓
+Green LED ON
+     ↓
+System RUNNING
+```
 
-## Project Objective
+### STOP Sequence
 
-* Understand basic state-machine control logic.
-* Implement START, STOP, E-STOP, and RESET functions using an ESP32.
-* Use LED indicators to represent different system states.
-* Practice basic input and output control in an embedded system.
+```text
+STOP Button
+     ↓
+digitalRead()
+     ↓
+state = 0
+     ↓
+Green LED OFF
+     ↓
+Red LED OFF
+     ↓
+System READY
+```
 
-## Notes
+### E-STOP Sequence
 
-This project is an educational simulation using an ESP32 and LED indicators. It is not a safety-rated emergency stop system and must not be used as a replacement for industrial safety hardware.
+```text
+E-STOP Button
+     ↓
+digitalRead()
+     ↓
+state = 2
+     ↓
+Green LED OFF
+     ↓
+Red LED ON
+     ↓
+System EMERGENCY
+```
+
+### RESET Sequence
+
+```text
+RESET Button
+     ↓
+digitalRead()
+     ↓
+state = 0
+     ↓
+Green LED OFF
+     ↓
+Red LED OFF
+     ↓
+System READY
+```
+
+Variabel `state` digunakan untuk menyimpan kondisi sistem:
+
+- `state = 0` → READY
+- `state = 1` → RUNNING
+- `state = 2` → EMERGENCY
+
+Ketika tombol **START** ditekan saat sistem berada pada kondisi READY, ESP32 mengubah nilai `state` menjadi `1`. LED hijau akan menyala sebagai indikator bahwa sistem sedang RUNNING.
+
+Ketika tombol **STOP** ditekan saat sistem sedang RUNNING, ESP32 mengubah nilai `state` menjadi `0`. Kedua LED akan mati dan sistem kembali ke kondisi READY.
+
+Ketika tombol **E-STOP** ditekan, ESP32 mengubah nilai `state` menjadi `2`. LED hijau akan mati dan LED merah akan menyala sebagai indikator kondisi EMERGENCY.
+
+Kondisi EMERGENCY tetap tersimpan meskipun tombol E-STOP dilepas. Sistem hanya dapat kembali ke kondisi READY setelah tombol **RESET** ditekan.
+
+Konsep ini mensimulasikan **state machine control**, yaitu sistem yang memiliki beberapa kondisi dan berpindah dari satu kondisi ke kondisi lainnya berdasarkan input yang diterima.
+
+---
+
+## 3. Hardware & Pin Configuration
+
+| Component | GPIO | Function |
+|---|---:|---|
+| Green LED | GPIO 23 | Output / RUNNING Indicator |
+| Red LED | GPIO 22 | Output / EMERGENCY Indicator |
+| START Button | GPIO 18 | Input / START Command |
+| STOP Button | GPIO 19 | Input / STOP Command |
+| E-STOP Button | GPIO 21 | Input / Emergency Command |
+| RESET Button | GPIO 4 | Input / RESET Command |
+
+### Input Configuration
+
+Push button menggunakan konfigurasi:
+
+```cpp
+INPUT_PULLDOWN
+```
+
+Dengan konfigurasi ini, kondisi input secara default berada pada `LOW`. Ketika push button ditekan, input menerima tegangan `3.3V` sehingga terbaca sebagai `HIGH`.
+
+### LED Configuration
+
+LED digunakan sebagai indikator kondisi sistem.
+
+Rangkaian LED menggunakan resistor sebagai pembatas arus:
+
+```text
+GPIO
+   │
+Resistor 1kΩ
+   │
+LED (+)
+LED (-)
+   │
+  GND
+```
+
+LED hijau digunakan sebagai indikator RUNNING, sedangkan LED merah digunakan sebagai indikator EMERGENCY.
+
+---
+
+## 4. Operation
+
+| Action | Result |
+|---|---|
+| Initial State | Both LEDs OFF |
+| Press START | Green LED turns ON |
+| Press STOP | Both LEDs turn OFF |
+| Press E-STOP | Red LED turns ON, green LED turns OFF |
+| Release E-STOP | System remains in EMERGENCY |
+| Press RESET | Both LEDs turn OFF, system returns to READY |
+
+### Operating Sequence
+
+```text
+Initial State
+     ↓
+System READY
+     ↓
+Press START
+     ↓
+System RUNNING
+     ↓
+Press E-STOP
+     ↓
+System EMERGENCY
+     ↓
+Release E-STOP
+     ↓
+System remains in EMERGENCY
+     ↓
+Press RESET
+     ↓
+System READY
+```
+
+---
+
+## 5. Learning Outcomes
+
+Through this project, the following concepts were learned:
+
+- Digital Input
+- Digital Output
+- Push Button
+- LED Control
+- `digitalRead()`
+- `digitalWrite()`
+- Integer Variable (`int`)
+- State Management
+- State Machine
+- `INPUT_PULLDOWN`
+- START/STOP Control Logic
+- Emergency Stop Logic
+- Basic Industrial Control Logic
+
+---
