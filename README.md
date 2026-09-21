@@ -40,7 +40,7 @@ A collection of industrial automation projects built with ESP32, inspired by PLC
 | No. | Project                  | Main Topics                          | Status |
 | --- | ------------------------ | ------------------------------------ | :----: |
 | 01  | Start Stop Station       | Digital I/O, Latching, State Control |    ✅   |
-| 02  | Emergency Stop System    | Safety, Interlock                    |    ⏳   |
+| 02  | Emergency Stop System    | Safety, Interlock                    |    ✅   |
 | 03  | Conveyor Timer           | Timers, State Machine                |    ⏳   |
 | 04  | Object Counter           | Sensors, Counter                     |    ⏳   |
 | 05  | Traffic Light Controller | Finite State Machine                 |    ⏳   |
