@@ -1,0 +1,60 @@
+# Project 02: Emergency Stop Station
+
+## Overview
+
+Emergency Stop Station is an ESP32-based control system simulation designed to demonstrate basic industrial control logic using push buttons and LED indicators.
+
+The system has three operating states: **READY**, **RUNNING**, and **EMERGENCY**. It uses a state-based control mechanism to manage the system's operation and simulate an emergency stop condition.
+
+## Components
+
+* ESP32 Development Board
+* 4 Push Buttons:
+
+  * START
+  * STOP
+  * E-STOP
+  * RESET
+* Green LED as RUNNING indicator
+* Red LED as EMERGENCY indicator
+* 2 × 1 kΩ resistors
+* Breadboard and jumper wires
+
+## Pin Configuration
+
+| Component     | ESP32 GPIO |
+| ------------- | ---------- |
+| Green LED     | GPIO 23    |
+| Red LED       | GPIO 22    |
+| START Button  | GPIO 18    |
+| STOP Button   | GPIO 19    |
+| E-STOP Button | GPIO 21    |
+| RESET Button  | GPIO 4     |
+
+## System Operation
+
+The system operates using three states:
+
+* **READY:** Both LEDs are OFF. The system is ready to start.
+* **RUNNING:** The green LED is ON, indicating that the system is running.
+* **EMERGENCY:** The red LED is ON and the green LED is OFF. The system remains in this state until the RESET button is pressed.
+
+### Control Logic
+
+1. Pressing **START** changes the state from READY to RUNNING.
+2. Pressing **STOP** changes the state from RUNNING to READY.
+3. Pressing **E-STOP** changes the state to EMERGENCY.
+4. Pressing **RESET** changes the state from EMERGENCY to READY.
+
+The emergency state remains active even after the E-STOP button is released.
+
+## Project Objective
+
+* Understand basic state-machine control logic.
+* Implement START, STOP, E-STOP, and RESET functions using an ESP32.
+* Use LED indicators to represent different system states.
+* Practice basic input and output control in an embedded system.
+
+## Notes
+
+This project is an educational simulation using an ESP32 and LED indicators. It is not a safety-rated emergency stop system and must not be used as a replacement for industrial safety hardware.
