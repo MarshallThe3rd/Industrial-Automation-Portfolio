@@ -1,7 +1,7 @@
 
 # Project 02 - Emergency Stop Station
 
-LINK VIDEO : [Tambahkan link video di sini]
+LINK VIDEO : https://youtu.be/ms8RlsjGRMo
 
 ## 1. System Overview
 
