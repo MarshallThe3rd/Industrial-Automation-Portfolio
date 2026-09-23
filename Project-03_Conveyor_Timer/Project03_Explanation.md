@@ -240,8 +240,8 @@ Conveyor_Motor = FALSE
 
 Sistem berada pada kondisi **READY**.
 
-> <img width="976" height="512" alt="image" src="https://github.com/user-attachments/assets/da4b9703-1b44-433f-a247-57962cb8ea07" />
-> <img width="852" height="242" alt="image" src="https://github.com/user-attachments/assets/14fd4d1f-3825-4855-89ff-c931e8dfb087" />
+<img width="976" height="512" alt="image" src="https://github.com/user-attachments/assets/da4b9703-1b44-433f-a247-57962cb8ea07" />
+<img width="852" height="242" alt="image" src="https://github.com/user-attachments/assets/14fd4d1f-3825-4855-89ff-c931e8dfb087" />
 
 ### Start Cycle
 
@@ -254,8 +254,8 @@ Conveyor_Motor = TRUE
 Timer mulai menghitung
 ```
 
-> <img width="972" height="502" alt="image" src="https://github.com/user-attachments/assets/3e7460a3-7278-4f09-afa3-8bca9f25931a" />
-> <img width="851" height="247" alt="image" src="https://github.com/user-attachments/assets/f50ad10f-c7bc-4558-996c-79c4e78d7dcc" />
+<img width="972" height="502" alt="image" src="https://github.com/user-attachments/assets/3e7460a3-7278-4f09-afa3-8bca9f25931a" />
+<img width="851" height="247" alt="image" src="https://github.com/user-attachments/assets/f50ad10f-c7bc-4558-996c-79c4e78d7dcc" />
 
 ### Start Button Released
 
@@ -269,8 +269,8 @@ Conveyor_Motor = TRUE
 
 Cycle tetap berjalan karena menggunakan **Self-Holding**.
 
-> <img width="971" height="509" alt="image" src="https://github.com/user-attachments/assets/e480f23d-1cdb-4443-a2ab-683779370ee9" />
-> <img width="864" height="431" alt="image" src="https://github.com/user-attachments/assets/a8da6708-4a10-4b18-8822-c90df822c096" />
+<img width="971" height="509" alt="image" src="https://github.com/user-attachments/assets/e480f23d-1cdb-4443-a2ab-683779370ee9" />
+<img width="864" height="431" alt="image" src="https://github.com/user-attachments/assets/a8da6708-4a10-4b18-8822-c90df822c096" />
 
 ### Timer Completed
 
@@ -284,8 +284,8 @@ Conveyor_Motor = FALSE
 
 Sistem kembali ke kondisi **READY**.
 
-> <img width="985" height="520" alt="image" src="https://github.com/user-attachments/assets/2f37361a-1d50-47e9-9a37-6a58f929ec78" />
-> <img width="857" height="245" alt="image" src="https://github.com/user-attachments/assets/8241b379-52ea-486a-aede-4539ccd5ad14" />
+<img width="985" height="520" alt="image" src="https://github.com/user-attachments/assets/2f37361a-1d50-47e9-9a37-6a58f929ec78" />
+<img width="857" height="245" alt="image" src="https://github.com/user-attachments/assets/8241b379-52ea-486a-aede-4539ccd5ad14" />
 
 
 ### Manual Stop
@@ -302,8 +302,8 @@ READY
 
 `Cycle_Active` dan `Conveyor_Motor` akan menjadi FALSE.
 
-> <img width="975" height="518" alt="image" src="https://github.com/user-attachments/assets/4070c466-a7c9-4be1-885e-3d5cb148d220" />
-> <img width="862" height="242" alt="image" src="https://github.com/user-attachments/assets/01663019-e824-484d-888b-30750d1deb08" />
+<img width="975" height="518" alt="image" src="https://github.com/user-attachments/assets/4070c466-a7c9-4be1-885e-3d5cb148d220" />
+<img width="862" height="242" alt="image" src="https://github.com/user-attachments/assets/01663019-e824-484d-888b-30750d1deb08" />
 
 ---
 
