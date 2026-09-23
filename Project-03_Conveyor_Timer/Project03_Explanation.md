@@ -1,5 +1,3 @@
-<img width="807" height="516" alt="image" src="https://github.com/user-attachments/assets/1efdd19f-6ea1-46f3-abdc-9a6d488a9e95" /># Project 03: Conveyor Timer
-
 ## 1. Project Overview
 
 Pada Project 03 atau **Conveyor Timer**, saya ingin membuat sebuah sistem conveyor yang dapat berjalan selama waktu tertentu.
