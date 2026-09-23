@@ -1,4 +1,4 @@
-# Project 03: Conveyor Timer
+<img width="807" height="516" alt="image" src="https://github.com/user-attachments/assets/1efdd19f-6ea1-46f3-abdc-9a6d488a9e95" /># Project 03: Conveyor Timer
 
 ## 1. Project Overview
 
@@ -127,6 +127,8 @@ Network ini menangani:
 - STOP
 - Penghentian cycle ketika timer selesai
 
+<img width="698" height="297" alt="image" src="https://github.com/user-attachments/assets/a6b21b8b-51de-4581-b350-2cada7b47b71" />
+
 ### Network 2 - Conveyor Timer
 
 Network kedua menggunakan **TON (Timer On-Delay)**.
@@ -142,6 +144,8 @@ PT = T#5s
 Artinya, ketika `Cycle_Active` TRUE, timer akan menghitung selama **5 detik**.
 
 Setelah 5 detik tercapai, `Timer.Q` menjadi TRUE.
+
+<img width="692" height="275" alt="image" src="https://github.com/user-attachments/assets/dac6b613-97b3-459d-a884-469e6826751c" />
 
 ### Network 3 - Conveyor Motor
 
@@ -170,6 +174,8 @@ maka:
 ```text
 Conveyor_Motor = FALSE
 ```
+
+<img width="702" height="207" alt="image" src="https://github.com/user-attachments/assets/55bd3fdd-8464-43cf-b2b8-6bb490a5e399" />
 
 ---
 
